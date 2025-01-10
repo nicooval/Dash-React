@@ -1,0 +1,17 @@
+# Node.js
+**/node_modules/
+**/config/
+
+# Archivos de entorno
+**/.env
+
+# Carpeta de build
+**/build/
+**/dist/
+
+# Archivos de logs
+**/logs/
+**/*.log
+
+# Otros archivos temporales
+.DS_Store

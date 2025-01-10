@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.map-container {
+  position: relative;
+  z-index: 1; /* Asegúrate de que sea menor que el del panel */
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-control { z-index: 0 !important}
+.leaflet-pane { z-index: 0 !important}
+.leaflet-top, .leaflet-bottom {z-index: 0 !important}
+
+
+/* Asegúrate de que el contenedor del mapa esté por detrás de otros elementos */
+.leaflet-container {
+  z-index: 0 !important; /* Asegúrate de que esté por debajo del panel */
+}
+
+/* Si tienes otros elementos de Leaflet, como panes o controles, ajusta sus z-index también */
+.leaflet-control {
+  z-index: 0 !important; /* Controles del mapa */
+}
+
+.leaflet-pane {
+  z-index: 0 !important; /* Pane de Leaflet */
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important; /* Posicionamiento de los panes */
+}
+
